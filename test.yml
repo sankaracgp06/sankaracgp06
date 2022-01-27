@@ -1,0 +1,13 @@
+---
+- name: Collect any Oracle Database Patch level and State info
+  hosts: all
+  gather_facts: false
+  become: true
+  ignore_errors: true
+  tasks:
+    - name: "Current date"
+      shell: date +"%m-%d-%Y"
+      register: today
+...      
+      
+   
